@@ -134,6 +134,14 @@ p {
     color: var(--primario);
 }
 
+.centrar-texto {
+    text-align: center;
+}
+
+.centrar-texto span {
+    color: var(--terciario)
+}
+
 .boton {
     background-color: var(--secundario);
     padding: 1rem 5rem;
