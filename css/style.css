@@ -177,7 +177,7 @@ p {
     .servicio {
         /*Toma todo el tamaño y se expande para abarcar todo*/
         /*Si le damos un valor pj de 2 tomaria el doble de lo de un elemento*/
-        flex: 0 0 calc(33.3% - 1.5rem);
+        flex: 0 0 calc(50% - 3.0rem);
     }
 }
 
@@ -197,6 +197,12 @@ p {
         text-align: unset;
     }
 }
+
+
+/*The icons were taken from font awesome that is implemented in this project*/
+
+
+/*Just search in font awesome the icon you want and copy the code that they give you*/
 
 .iconos {
     width: 100px;
