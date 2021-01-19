@@ -142,6 +142,10 @@ p {
     color: var(--terciario)
 }
 
+.justify-text {
+    text-align: justify;
+}
+
 .boton {
     background-color: var(--secundario);
     padding: 1rem 5rem;
@@ -189,6 +193,22 @@ p {
     }
 }
 
+.contenedor-skills {
+    margin-top: 4rem;
+}
+
+@media(min-width: 768px) {
+    .contenedor-skills {
+        display: flex;
+        justify-content: space-between;
+    }
+    .skills {
+        /*Toma todo el tamaño y se expande para abarcar todo*/
+        /*Si le damos un valor pj de 2 tomaria el doble de lo de un elemento*/
+        flex: 0 0 calc(33.3% - 2rem);
+    }
+}
+
 .servicio {
     /*Centrar circulo servicio*/
     display: flex;
@@ -202,6 +222,23 @@ p {
 
 @media(min-width: 768px) {
     .servicio p {
+        text-align: unset;
+    }
+}
+
+.skills {
+    /*Centrar circulo servicio*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills p {
+    text-align: justify;
+}
+
+@media(min-width: 768px) {
+    .skills p {
         text-align: unset;
     }
 }
