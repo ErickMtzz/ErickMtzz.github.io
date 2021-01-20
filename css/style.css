@@ -404,6 +404,18 @@ form p {
     font-weight: 400;
 }
 
+.project h4 {
+    text-align: center;
+    margin: 1rem;
+}
+
+@media(min-width:768px) {
+    .project h4 {
+        text-align: justify;
+        margin: 0;
+    }
+}
+
 @media(min-width: 768px) {
     .grid {
         display: flex;
