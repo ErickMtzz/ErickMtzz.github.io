@@ -35,6 +35,14 @@ body {
     font-size: 1.6rem;
 }
 
+img {
+    max-width: 100%;
+}
+
+.margin-bot {
+    margin-bottom: 5rem;
+}
+
 h1,
 h2,
 h3 {
@@ -50,6 +58,11 @@ h3 {
     font-weight: 400;
     font-size: 2.5rem;
     color: var(--secundario);
+}
+
+h4 {
+    font-size: 2.6rem;
+    line-height: 1.2;
 }
 
 p {
@@ -142,6 +155,10 @@ p {
     color: var(--terciario)
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .justify-text {
     text-align: justify;
 }
@@ -163,6 +180,36 @@ p {
 
 .boton:hover {
     cursor: pointer;
+}
+
+.btn {
+    /*Para que crezcan y tomen todo el espacio disponible*/
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-decoration: none;
+    /*Para forzar al padre a crecer*/
+    flex: 0 0 100%;
+}
+
+@media(min-width:600px) {
+    .btn {
+        /*Para que no crezan los botones*/
+        /*Define el ancho por medio del padding*/
+        display: inline-block;
+        /*Para que se haga pequeño cuando la pagina sea mas de 600px*/
+        flex: 0 0 auto;
+    }
+}
+
+.btn-secundario {
+    background-color: var(--terciario);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .contenedor {
@@ -335,4 +382,55 @@ form p {
 .enviar {
     display: flex;
     justify-content: flex-end;
+}
+
+
+/*PROJECTS*/
+
+.project {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #777373c0;
+}
+
+.project p {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem
+}
+
+.project span,
+.project p.descripcion {
+    font-weight: 400;
+}
+
+@media(min-width: 768px) {
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        /*Para que el formulario se vaya hacia abajo*/
+        flex-wrap: wrap;
+    }
+    .centrar-columnas {
+        justify-content: center;
+    }
+    .columnas-6 {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-4 {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas-8 {
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-10 {
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12 {
+        flex: 0 0 100%;
+    }
+}
+
+.contenedor h2 {
+    font-size: 3.5rem;
 }
