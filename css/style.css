@@ -35,6 +35,9 @@ body {
     font-size: 1.6rem;
 }
 
+
+/*Utilities*/
+
 img {
     max-width: 100%;
 }
@@ -69,6 +72,58 @@ p {
     font-size: 1.8rem;
     line-height: 2;
 }
+
+.centrar-texto {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+
+/*Buttons*/
+
+.btn {
+    /*Para que crezcan y tomen todo el espacio disponible*/
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-decoration: none;
+    /*Para forzar al padre a crecer*/
+    flex: 0 0 100%;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+@media(min-width:600px) {
+    .btn {
+        /*Para que no crezan los botones*/
+        /*Define el ancho por medio del padding*/
+        display: inline-block;
+        /*Para que se haga pequeño cuando la pagina sea mas de 600px*/
+        flex: 0 0 auto;
+    }
+}
+
+.btn-secundario {
+    background-color: var(--terciario);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*Header*/
 
 .site-header {
     background-color: white;
@@ -147,70 +202,12 @@ p {
     color: var(--primario);
 }
 
-.centrar-texto {
-    text-align: center;
-}
-
 .centrar-texto span {
     color: var(--terciario)
 }
 
-.no-margin {
-    margin: 0;
-}
 
-.justify-text {
-    text-align: justify;
-}
-
-.boton {
-    background-color: var(--secundario);
-    padding: 1rem 5rem;
-    /*Inlineblock para poder agregar un margin*/
-    display: inline-block;
-    margin-top: 1rem;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 2rem;
-    border-radius: .5rem;
-    border: none;
-}
-
-.boton:hover {
-    cursor: pointer;
-}
-
-.btn {
-    /*Para que crezcan y tomen todo el espacio disponible*/
-    display: block;
-    text-align: center;
-    padding: 1rem 3rem;
-    margin: 2rem 0;
-    color: white;
-    font-family: 'PT Sans', sans-serif;
-    text-transform: uppercase;
-    font-size: 2rem;
-    text-decoration: none;
-    /*Para forzar al padre a crecer*/
-    flex: 0 0 100%;
-}
-
-@media(min-width:600px) {
-    .btn {
-        /*Para que no crezan los botones*/
-        /*Define el ancho por medio del padding*/
-        display: inline-block;
-        /*Para que se haga pequeño cuando la pagina sea mas de 600px*/
-        flex: 0 0 auto;
-    }
-}
-
-.btn-secundario {
-    background-color: var(--terciario);
-    font-family: 'Open Sans', sans-serif;
-}
+/*Containers*/
 
 .contenedor {
     max-width: 1200px;
@@ -225,7 +222,7 @@ p {
 }
 
 .contenedor-servicios {
-    margin-top: 4rem;
+    margin: 4rem;
 }
 
 @media(min-width: 768px) {
@@ -269,7 +266,7 @@ p {
 
 @media(min-width: 768px) {
     .servicio p {
-        text-align: unset;
+        text-align: justify;
     }
 }
 
@@ -286,10 +283,10 @@ p {
 
 @media(min-width: 768px) {
     .skills p {
-        text-align: unset;
+        text-align: center;
     }
     .skill p {
-        text-align: justify;
+        text-align: center;
     }
 }
 
@@ -312,6 +309,9 @@ p {
     font-size: 3rem;
     margin-top: 2rem;
 }
+
+
+/*In this version i remove the forms, this because its a static version*/
 
 form {
     background-color: rgb(195, 236, 183);
